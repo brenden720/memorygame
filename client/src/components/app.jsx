@@ -106,7 +106,6 @@ class App extends React.Component {
         ['previousCard']: prevCard,
       });
     } else if (currentCount === 1) {
-      console.log(this.state);
         for (let i = 0; i < cardStorage.length; i++) {
           if (cardStorage[i].card === card && !cardStorage[i].isClicked && card === previousCard) {
             cardStorage[i].isClicked = true;
@@ -131,7 +130,6 @@ class App extends React.Component {
             }
           });    
           cardStorage = cardStorageTemp;
-          console.log(cardStorage);
           this.setState({
             ['cards']: cardStorage,
             ['count']: currentCount,
